@@ -1,8 +1,5 @@
 // import dependencies
 import React from "React";
-import faker from "faker";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
 
 // import components
 import { GithubAPI } from "../sources/github.js";
@@ -13,8 +10,13 @@ import { formatNumber } from "../../utils/numbers.js";
 
 // import styles
 import "../../components/listing/styles/_listing.scss";
-import { faLink } from "@fortawesome/free-solid-svg-icons";
 
+/**
+ * 
+ Dummy data constructor, this is temporary and should never be added to production copies
+ * 
+ *  */
+import faker from "faker";
 const jobList = [];
 const buildJobListing = () => {
   return {
@@ -29,7 +31,6 @@ const buildJobListing = () => {
       faker.lorem.word(),
       faker.lorem.word()
     ],
-    source: faker.random.arrayElement([<FontAwesomeIcon icon={faLinkedin} />]),
     description: faker.lorem.paragraph(),
     salary: formatNumber(faker.random.number({ min: 30000, max: 200000 })),
     date: faker.date.month() + " " + faker.random.number({ min: 1, max: 28 })
@@ -39,6 +40,10 @@ const buildJobListing = () => {
 for (let i = 0; i < 25; i++) {
   jobList.push(buildJobListing());
 }
+
+/**
+ * End dummy data
+ */
 
 const JobFeed = () => {
   return (
