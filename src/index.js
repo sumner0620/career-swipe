@@ -1,5 +1,5 @@
 // import dependencies
-import React, { useEffect } from "react";
+import React from "react";
 import ReactDOM from "react-dom";
 
 // import components
