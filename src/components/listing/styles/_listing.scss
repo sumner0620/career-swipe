@@ -1,0 +1,59 @@
+@import "../../../base-styles/fonts";
+
+section.job-listing {
+  margin: 33px auto;
+  max-width: 80%;
+  box-shadow: 1px 1px 3px #989898;
+  border-radius: 6px;
+  h4 {
+    @include font(18px, 400);
+    @include main-font();
+  }
+  header {
+    h2 {
+      border-left: 2px solid #00dbff;
+      padding-left: 15px;
+    }
+    p.location {
+      svg {
+        color: #00dbff;
+      }
+    }
+  }
+  footer {
+    button {
+      @include font(33px, regular);
+      color: #ffffff;
+      padding: 18px;
+      border: none;
+      &.save {
+        background-color: #80c904;
+      }
+      &.reject {
+        background-color: #ff0000;
+      }
+    }
+  }
+  svg {
+    margin-right: 9px;
+  }
+  .container {
+    padding: 54px 33px;
+  }
+  .job-footer {
+    @include font(18px, 400);
+    margin-top: 18px;
+    padding: 12px;
+    background-color: #ececec;
+    border-radius: 3px;
+    aside.salary {
+      svg {
+        color: #80c904;
+      }
+    }
+  }
+  .job-meta {
+    border-top: 2px solid;
+    padding: 0 18px;
+  }
+}

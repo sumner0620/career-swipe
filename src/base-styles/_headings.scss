@@ -1,0 +1,15 @@
+@import "_fonts.scss";
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @include headings-font();
+}
+
+h2 {
+  @include font(42px, 300);
+  margin-top: 0;
+}

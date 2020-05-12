@@ -2,12 +2,14 @@
 import React from "React";
 
 // import components
-import JobFeed from './JobFeed.js'
+import JobFeed from "./JobFeed.js";
+import Sidebar from "./Sidebar.js";
 
 export const Body = () => {
-    return (
-        <main>
-            <JobFeed />
-        </main>
-    )
-}
+  return (
+    <main className="flex row afs jfc">
+      <JobFeed />
+      <Sidebar />
+    </main>
+  );
+};

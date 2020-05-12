@@ -1,0 +1,15 @@
+@import "_fonts.scss";
+body {
+  @include main-font();
+  @include font(15px, 400);
+
+  details,
+  summary {
+    outline: 0 !important;
+    &:focus,
+    &:focus-within,
+    &:active {
+      outline: 0 !important;
+    }
+  }
+}

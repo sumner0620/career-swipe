@@ -1,0 +1,16 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap");
+
+@mixin headings-font() {
+  font-family: "Roboto", sans-serif;
+}
+
+@mixin main-font() {
+  font-family: "Roboto Slab", serif;
+}
+
+@mixin font($size, $weight) {
+  font-size: $size;
+  font-weight: $weight;
+}

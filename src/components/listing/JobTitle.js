@@ -1,6 +1,6 @@
 // import dependencies
-import React from "React"
+import React from "React";
 
-export const JobTitle = (props) => {
-    return <h2>{props.title}</h2>
-}
+export const JobTitle = props => {
+  return <h2>{props.title}</h2>;
+};
