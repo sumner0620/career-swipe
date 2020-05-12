@@ -11,17 +11,13 @@ import { Salary } from './Salary.js'
 import { Requirements } from './Requirements.js'
 import { Description } from './Description.js'
 
-// import styles
-import '../../base-styles/_normalize.scss'
-import '../../base-styles/_flex.scss'
-
 export const Listing = (props) => {
     // const [viewed, setViewed] = useState(false)
     // return <Salary salary={faker.random.number({ min: 30000, max: 200000 })} />
     return (
         <section>
             <header className="job-heading flex col center">
-                {/* <JobTitle title={faker.name.jobTitle()} /> */}
+                <JobTitle title={faker.name.jobTitle()} />
                 <div className="flex row center">
                     <Company company={faker.company.companyName()} />
                     <Location location={faker.address.city()} />
