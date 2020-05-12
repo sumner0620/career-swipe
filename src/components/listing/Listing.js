@@ -13,23 +13,24 @@ import { Description } from './Description.js'
 
 export const Listing = (props) => {
     // const [viewed, setViewed] = useState(false)
-    // return <Salary salary={faker.random.number({ min: 30000, max: 200000 })} />
+    console.log(props)
     return (
         <section>
             <header className="job-heading flex col center">
-                <JobTitle title={faker.name.jobTitle()} />
+                <JobTitle title={props.name} />
+
                 <div className="flex row center">
-                    <Company company={faker.company.companyName()} />
-                    <Location location={faker.address.city()} />
+                    <Company company={props.company} />
+                    <Location location={props.location} />
                 </div>
             </header>
             <div className="detail-section">
                 {/* <Requirements reqs={faker.random.arrayElement()} /> */}
-                <Description desc={faker.lorem.paragraph()} />
+                <Description desc={props.description} />
             </div>
             <footer className="job-footer">
-                <Salary salary={faker.random.number({ min: 30000, max: 200000 })} />
-                <PostDate date={faker.date.recent()} />
+                <Salary salary={props.salary} />
+                <PostDate date={props.date} />
             </footer>
         </section>
     )

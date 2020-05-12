@@ -2,7 +2,7 @@ import React from "React";
 
 const Sidebar = () => {
     return (
-        <div id="main-sidebar">Sidebar</div>
+        <div id="main-sidebar">Saved Jobs</div>
     )
 }
 
