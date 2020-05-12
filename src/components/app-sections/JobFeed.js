@@ -47,7 +47,7 @@ for (let i = 0; i < 25; i++) {
 
 const JobFeed = () => {
   return (
-    <section id="job-feed">
+    <section id="job-feed" className="item_3_4">
       <h2 className="flex row full afc jfc">Job Feed</h2>
       {jobList.map(job => {
         return <Listing key={job.name} {...job} />;

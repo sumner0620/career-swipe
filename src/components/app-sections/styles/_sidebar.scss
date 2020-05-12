@@ -1,0 +1,10 @@
+@import "../../../base-styles/_fonts.scss";
+#main-sidebar {
+  box-sizing: border-box;
+  padding: 0 21px;
+
+  > h2 {
+    @include fun-font();
+    @include font(72px, 400);
+  }
+}

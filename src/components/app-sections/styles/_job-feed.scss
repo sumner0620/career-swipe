@@ -1,0 +1,9 @@
+@import "../../../base-styles/_fonts.scss";
+#job-feed {
+  padding: 0 33px;
+  box-sizing: border-box;
+  > h2 {
+    @include fun-font();
+    @include font(72px, 400);
+  }
+}

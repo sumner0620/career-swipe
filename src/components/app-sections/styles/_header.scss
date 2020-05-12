@@ -1,0 +1,15 @@
+@import "../../../base-styles/_fonts.scss";
+header#main-header {
+  box-sizing: border-box;
+  padding: 54px 21px 72px;
+  h1 {
+    @include fun-font();
+    font-size: 102px;
+    .left-word {
+      color: #5bc0eb;
+    }
+    .right-word {
+      color: #fde74c;
+    }
+  }
+}

@@ -13,7 +13,9 @@ import { Requirements } from "./Requirements.js";
 import { Description } from "./Description.js";
 
 export const Listing = props => {
-  // const [viewed, setViewed] = useState(false)
+  const [viewed, setViewed] = useState(false);
+  const [saved, setSaved] = useState(false);
+  const [rejected, setRejected] = useState(false);
   return (
     <section className="job-listing">
       <div className="container">

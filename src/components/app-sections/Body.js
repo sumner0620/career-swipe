@@ -5,6 +5,9 @@ import React from "React";
 import JobFeed from "./JobFeed.js";
 import Sidebar from "./Sidebar.js";
 
+// import styles
+import "./styles/_job-feed.scss";
+
 export const Body = () => {
   return (
     <main className="flex row afs jfc">
