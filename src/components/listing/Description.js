@@ -1,7 +1,7 @@
 // import dependencies
-import React from "React";
+import React from "react";
 
-export const Description = props => {
+const Description = props => {
   return (
     <section className="jobDetails item_1_2">
       <summary>
@@ -13,3 +13,5 @@ export const Description = props => {
     </section>
   );
 };
+
+export default Description;

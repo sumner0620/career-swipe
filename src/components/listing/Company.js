@@ -1,9 +1,9 @@
 // import dependencies
-import React from "React";
+import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBuilding } from "@fortawesome/free-solid-svg-icons";
 
-export const Company = props => {
+const Company = props => {
   return (
     <aside>
       <FontAwesomeIcon icon={faBuilding} />
@@ -11,3 +11,5 @@ export const Company = props => {
     </aside>
   );
 };
+
+export default Company;

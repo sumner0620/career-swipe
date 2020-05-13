@@ -1,21 +1,21 @@
 // import dependencies
-import React, { useState } from "React";
+import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheck, faTimes } from "@fortawesome/free-solid-svg-icons";
 
 // import components
-import { JobTitle } from "./JobTitle.js";
-import { Company } from "./Company.js";
-import { PostDate } from "./PostDate.js";
-import { Location } from "./Location.js";
-import { Salary } from "./Salary.js";
-import { Requirements } from "./Requirements.js";
-import { Description } from "./Description.js";
+import JobTitle from "./JobTitle.js";
+import Company from "./Company.js";
+import PostDate from "./PostDate.js";
+import Location from "./Location.js";
+import Salary from "./Salary.js";
+import Requirements from "./Requirements.js";
+import Description from "./Description.js";
 
-export const Listing = props => {
-  const [viewed, setViewed] = useState(false);
-  const [saved, setSaved] = useState(false);
-  const [rejected, setRejected] = useState(false);
+const Listing = props => {
+  const [viewed, setViewed] = React.useState(false);
+  const [saved, setSaved] = React.useState(false);
+  const [rejected, setRejected] = React.useState(false);
   return (
     <section className="job-listing">
       <div className="container">
@@ -47,3 +47,5 @@ export const Listing = props => {
     </section>
   );
 };
+
+export default Listing;

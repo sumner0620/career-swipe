@@ -1,5 +1,5 @@
 // import dependencies
-import React from "React";
+import React from "react";
 
 // import components
 import JobFeed from "./JobFeed.js";

@@ -1,9 +1,9 @@
 // import dependencies
-import React from "React";
+import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faDollarSign } from "@fortawesome/free-solid-svg-icons";
 
-export const Salary = props => {
+const Salary = props => {
   return (
     <aside className="salary">
       <FontAwesomeIcon icon={faDollarSign} />
@@ -11,3 +11,5 @@ export const Salary = props => {
     </aside>
   );
 };
+
+export default Salary;

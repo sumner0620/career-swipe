@@ -1,7 +1,7 @@
 // import dependencies
-import React from "React";
+import React from "react";
 
-export const Requirements = props => {
+const Requirements = props => {
   let i = 0;
   let reqList = props.skills.map(req => {
     i++;
@@ -14,3 +14,5 @@ export const Requirements = props => {
     </div>
   );
 };
+
+export default Requirements;

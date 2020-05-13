@@ -1,9 +1,9 @@
 // import dependencies
-import React from "React";
+import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGlobeAmericas } from "@fortawesome/free-solid-svg-icons";
 
-export const Location = props => {
+const Location = props => {
   return (
     <p className="location">
       <FontAwesomeIcon icon={faGlobeAmericas} />
@@ -11,3 +11,5 @@ export const Location = props => {
     </p>
   );
 };
+
+export default Location;

@@ -13,10 +13,11 @@ import "./base-styles/_normalize.scss";
 import "./base-styles/_flex.scss";
 import "./base-styles/_headings.scss";
 import "./base-styles/_content.scss";
+import "./components/app-sections/styles/_body.scss";
 
 const App = () => {
   return (
-    <div>
+    <div id="site-container">
       <Header />
       <Body />
       <Footer />

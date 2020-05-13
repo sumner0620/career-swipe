@@ -1,9 +1,9 @@
 // import dependencies
-import React from "React";
+import React from "react";
 
 // import components
 import { GithubAPI } from "../sources/github.js";
-import { Listing } from "../listing/Listing.js";
+import Listing from "../listing/Listing.js";
 
 // import ultilities
 import { formatNumber } from "../../utils/numbers.js";
@@ -16,6 +16,7 @@ import "../../components/listing/styles/_listing.scss";
  Dummy data constructor, this is temporary and should never be added to production copies
  * 
  *  */
+
 import faker from "faker";
 const jobList = [];
 const buildJobListing = () => {

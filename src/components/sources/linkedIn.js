@@ -1,4 +1,4 @@
-import React, { useEffect } from "React";
+import React, { useEffect } from "react";
 
 const LinkedInAPI = () => {
   const ENDPOINT =
