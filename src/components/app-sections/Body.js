@@ -8,7 +8,7 @@ import Sidebar from "./Sidebar.js";
 // import styles
 import "./styles/_job-feed.scss";
 
-export const Body = () => {
+const Body = () => {
   return (
     <main className="flex row afs jfc">
       <JobFeed />
@@ -16,3 +16,5 @@ export const Body = () => {
     </main>
   );
 };
+
+export default Body;
