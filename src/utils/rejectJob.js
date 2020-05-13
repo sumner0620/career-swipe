@@ -1,0 +1,1 @@
+const rejectJob = jobID => {};

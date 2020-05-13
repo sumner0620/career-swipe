@@ -2,7 +2,9 @@ import React, { useState } from "react";
 
 const SavedJobs = () => {
   const [saved, setSaved] = useState(() => {
-    const initialState = null;
-    return initialState;
+    const initialState = undefined;
   });
+  return <div></div>;
 };
+
+export default SavedJobs;
