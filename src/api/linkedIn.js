@@ -1,4 +1,3 @@
-import React, { useEffect } from "react";
 import times from "lodash/times";
 import faker from "faker";
 import { formatNumber } from "../utils/numbers";
