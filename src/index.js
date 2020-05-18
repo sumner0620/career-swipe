@@ -14,7 +14,6 @@ import "./base-styles/_flex.scss";
 import "./base-styles/_headings.scss";
 import "./base-styles/_content.scss";
 import "./components/app-sections/styles/_body.scss";
-import { SavedProvider } from "./contexts/SavedContext.js";
 
 const rootElement = document.getElementById("app-body");
 const App = () => {
@@ -27,9 +26,4 @@ const App = () => {
   );
 };
 
-ReactDOM.render(
-  <SavedProvider>
-    <App />
-  </SavedProvider>,
-  rootElement
-);
+ReactDOM.render(<App />, rootElement);

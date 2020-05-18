@@ -7,12 +7,15 @@ import Sidebar from "./Sidebar.js";
 
 // import styles
 import "./styles/_job-feed.scss";
+import { SavedProvider } from "../../contexts/SavedContext.js";
 
 const Body = () => {
   return (
     <main className="flex row afs jfc">
-      <JobFeed />
-      <Sidebar />
+      <SavedProvider value={{}}>
+        <JobFeed />
+        <Sidebar />
+      </SavedProvider>
     </main>
   );
 };
