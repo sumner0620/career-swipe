@@ -1,13 +1,14 @@
 import React, { createContext, useReducer } from "react";
 
 const initialState = { savedJobListings: [] };
-const SavedContext = createContext(initialState);
+const SavedContext = createContext();
 
 const SavedReducer = (state, action) => {
   switch (action.type) {
     case "SAVE_JOB":
-      state.savedJobListings.push(action.newJobListing);
-      return state;
+      return {
+        savedJobListings: [...state.savedJobListings, action.payload]
+      };
     default:
       throw new Error();
   }
@@ -16,10 +17,10 @@ const SavedProvider = ({ children }) => {
   const [state, dispatch] = useReducer(SavedReducer, initialState);
 
   return (
-    <SavedContext.Provider value={{ state, dispatch }}>
+    <SavedContext.Provider value={[state, dispatch]}>
       {children}
     </SavedContext.Provider>
   );
 };
 
-export { SavedContext, SavedProvider };
+export { SavedContext, SavedProvider, SavedReducer };

@@ -12,7 +12,7 @@ import { SavedProvider } from "../../contexts/SavedContext.js";
 const Body = () => {
   return (
     <main className="flex row afs jfc">
-      <SavedProvider value={{}}>
+      <SavedProvider>
         <JobFeed />
         <Sidebar />
       </SavedProvider>

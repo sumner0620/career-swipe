@@ -1,0 +1,12 @@
+@import "../../../base-styles/_fonts.scss";
+#saved-jobs {
+  position: fixed;
+  width: inherit;
+  * {
+    width: 100%;
+  }
+  > h2 {
+    @include fun-font();
+    @include font(72px, 400);
+  }
+}

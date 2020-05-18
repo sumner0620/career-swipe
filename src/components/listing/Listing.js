@@ -1,7 +1,8 @@
 // import dependencies
-import React, { useState } from "react";
+import React, { useContext } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheck, faTimes } from "@fortawesome/free-solid-svg-icons";
+import { SavedContext } from "../../contexts/SavedContext";
 
 // import components
 import JobTitle from "./JobTitle";
@@ -13,18 +14,33 @@ import Requirements from "./Requirements";
 import Description from "./Description";
 
 const Listing = props => {
-  const [saved, setSaved] = useState(false);
-  const [rejected, setRejected] = useState(false);
-
-  const save = () => {
-    console.log("saving", props.jobID);
-    setSaved(true);
+  const [state, dispatch] = useContext(SavedContext);
+  const save = jobDetails => {
+    dispatch({
+      type: "SAVE_JOB",
+      payload: {
+        jobID: jobDetails.jobID,
+        name: jobDetails.name,
+        company: jobDetails.company,
+        location: jobDetails.location,
+        salary: jobDetails.salary
+      }
+    });
+  };
+  const saveThisJob = () => {
+    const payload = {
+      jobID: props.jobID,
+      name: props.name,
+      company: props.company,
+      location: props.location,
+      salary: props.salary
+    };
+    save(payload);
+    console.log("Saved Jobs:", state);
   };
   const reject = () => {
     console.log("rejected", props.jobID);
-    setRejected(false);
   };
-
   return (
     <section className="job-listing">
       <div className="container">
@@ -49,7 +65,7 @@ const Listing = props => {
         <button className="item_1_2 reject" onClick={reject}>
           <FontAwesomeIcon icon={faTimes} />
         </button>
-        <button className="item_1_2 save" onClick={save}>
+        <button className="item_1_2 save" onClick={saveThisJob}>
           <FontAwesomeIcon icon={faCheck} />
         </button>
       </footer>
