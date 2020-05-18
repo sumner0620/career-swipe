@@ -1,0 +1,1 @@
+export { fetchJobListings } from "./linkedIn";

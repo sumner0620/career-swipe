@@ -4,18 +4,27 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheck, faTimes } from "@fortawesome/free-solid-svg-icons";
 
 // import components
-import JobTitle from "./JobTitle.js";
-import Company from "./Company.js";
-import PostDate from "./PostDate.js";
-import Location from "./Location.js";
-import Salary from "./Salary.js";
-import Requirements from "./Requirements.js";
-import Description from "./Description.js";
+import JobTitle from "./JobTitle";
+import Company from "./Company";
+import PostDate from "./PostDate";
+import Location from "./Location";
+import Salary from "./Salary";
+import Requirements from "./Requirements";
+import Description from "./Description";
 
 const Listing = props => {
-  const [viewed, setViewed] = React.useState(false);
-  const [saved, setSaved] = React.useState(false);
-  const [rejected, setRejected] = React.useState(false);
+  const [saved, setSaved] = useState(false);
+  const [rejected, setRejected] = useState(false);
+
+  const save = () => {
+    console.log("saving", props.jobID);
+    setSaved(true);
+  };
+  const reject = () => {
+    console.log("rejected", props.jobID);
+    setRejected(false);
+  };
+
   return (
     <section className="job-listing">
       <div className="container">
@@ -37,10 +46,10 @@ const Listing = props => {
         </div>
       </div>
       <footer className="flex row afc jfc">
-        <button className="item_1_2 reject">
+        <button className="item_1_2 reject" onClick={reject}>
           <FontAwesomeIcon icon={faTimes} />
         </button>
-        <button className="item_1_2 save">
+        <button className="item_1_2 save" onClick={save}>
           <FontAwesomeIcon icon={faCheck} />
         </button>
       </footer>

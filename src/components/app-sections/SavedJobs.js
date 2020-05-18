@@ -1,9 +1,8 @@
-import React, { useState } from "react";
+import React, { useContext } from "react";
+import { SavedContext } from "../../contexts/SavedContext";
 
 const SavedJobs = () => {
-  const [saved, setSaved] = useState(() => {
-    const initialState = undefined;
-  });
+  const savedList = useContext(SavedContext);
   return <div></div>;
 };
 

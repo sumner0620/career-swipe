@@ -77,6 +77,9 @@ typings/
 .env
 .env.test
 
+# google creds
+careerswipe-de1e53aa0823.json
+
 # parcel-bundler cache (https://parceljs.org/)
 .cache
 

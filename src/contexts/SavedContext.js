@@ -1,6 +1,6 @@
 import React, { createContext, useReducer } from "react";
 
-const initialState = { saved: false };
+const initialState = { jobListings: [] };
 const SavedContext = createContext(initialState);
 
 const SavedProvider = ({ children }) => {
