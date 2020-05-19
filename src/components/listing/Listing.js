@@ -36,7 +36,6 @@ const Listing = props => {
       salary: props.salary
     };
     save(payload);
-    console.log("Saved Jobs:", state);
   };
   const reject = () => {
     console.log("rejected", props.jobID);
