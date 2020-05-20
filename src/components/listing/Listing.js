@@ -1,7 +1,7 @@
 // import dependencies
 import React, { useContext } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCheck, faTimes } from "@fortawesome/free-solid-svg-icons";
+import { faHeart, faThumbsDown } from "@fortawesome/free-solid-svg-icons";
 import { SavedContext } from "../../contexts/SavedContext";
 import { JobListContext } from "../../contexts/JobListContext";
 
@@ -64,10 +64,10 @@ const Listing = props => {
       </div>
       <footer className="flex row afc jfc">
         <button className="item_1_2 reject" onClick={rejectThisJob}>
-          <FontAwesomeIcon icon={faTimes} />
+          <FontAwesomeIcon icon={faThumbsDown} />
         </button>
         <button className="item_1_2 save" onClick={saveThisJob}>
-          <FontAwesomeIcon icon={faCheck} />
+          <FontAwesomeIcon icon={faHeart} />
         </button>
       </footer>
     </section>
