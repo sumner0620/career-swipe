@@ -1,15 +1,26 @@
 import React, { createContext, useReducer } from "react";
 import { fetchJobListings } from "../api";
 
-const initialState = { jobList: [] };
+const initialData = () => {
+  let jobListArray = [];
+  fetchJobListings()
+    .then(r => r.json())
+    .then(({ data }) => {
+      jobListArray.push(...data);
+    });
+  return jobListArray;
+};
+
+const initialJobState = { jobList: initialData() };
 const JobListContext = createContext();
 
 const JobListReducer = (state, action) => {
   switch (action.type) {
     case "DELETE_JOB":
+      console.log("deleting");
       return {
         jobList: state.jobList.filter(
-          jobListing => jobListing.id !== action.payload
+          jobListing => jobListing.jobID !== action.payload
         )
       };
     default:
@@ -17,12 +28,12 @@ const JobListReducer = (state, action) => {
   }
 };
 const JobListProvider = ({ children }) => {
-  const [state, dispatch] = useReducer(JobListReducer, initialState);
+  const [jobState, jobDispatch] = useReducer(JobListReducer, initialJobState);
 
   return (
-    <JobListReducer.Provider value={[state, dispatch]}>
+    <JobListContext.Provider value={[jobState, jobDispatch]}>
       {children}
-    </JobListReducer.Provider>
+    </JobListContext.Provider>
   );
 };
 

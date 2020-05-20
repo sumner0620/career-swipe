@@ -4,7 +4,7 @@ import { SavedContext } from "../../contexts/SavedContext";
 const SavedJobs = () => {
   const [state] = useContext(SavedContext);
   const savedListingMarkup = state.savedJobListings.map(savedListing => {
-    return <li>{savedListing.name}</li>;
+    return <li key={savedListing.jobID}>{savedListing.name}</li>;
   });
   return (
     <div id="saved-jobs">

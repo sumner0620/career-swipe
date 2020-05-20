@@ -3,6 +3,7 @@ import React, { useContext } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheck, faTimes } from "@fortawesome/free-solid-svg-icons";
 import { SavedContext } from "../../contexts/SavedContext";
+import { JobListContext } from "../../contexts/JobListContext";
 
 // import components
 import JobTitle from "./JobTitle";
@@ -15,16 +16,11 @@ import Description from "./Description";
 
 const Listing = props => {
   const [state, dispatch] = useContext(SavedContext);
+  const [jobstate, jobdispatch] = useContext(JobListContext);
   const save = jobDetails => {
     dispatch({
       type: "SAVE_JOB",
-      payload: {
-        jobID: jobDetails.jobID,
-        name: jobDetails.name,
-        company: jobDetails.company,
-        location: jobDetails.location,
-        salary: jobDetails.salary
-      }
+      payload: { ...jobDetails }
     });
   };
   const saveThisJob = () => {
@@ -37,8 +33,14 @@ const Listing = props => {
     };
     save(payload);
   };
-  const reject = () => {
-    console.log("rejected", props.jobID);
+  const reject = jobID => {
+    jobdispatch({
+      type: "DELETE_JOB",
+      payload: jobID
+    });
+  };
+  const rejectThisJob = () => {
+    reject(props.jobID);
   };
   return (
     <section className="job-listing">
@@ -61,7 +63,7 @@ const Listing = props => {
         </div>
       </div>
       <footer className="flex row afc jfc">
-        <button className="item_1_2 reject" onClick={reject}>
+        <button className="item_1_2 reject" onClick={rejectThisJob}>
           <FontAwesomeIcon icon={faTimes} />
         </button>
         <button className="item_1_2 save" onClick={saveThisJob}>

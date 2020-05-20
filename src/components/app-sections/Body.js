@@ -14,9 +14,9 @@ const Body = () => {
   return (
     <main className="flex row afs jfc">
       <SavedProvider>
-        {/* <JobListProvider> */}
-        <JobFeed />
-        {/* </JobListProvider> */}
+        <JobListProvider>
+          <JobFeed />
+        </JobListProvider>
         <Sidebar />
       </SavedProvider>
     </main>
